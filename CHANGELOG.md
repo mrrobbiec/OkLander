@@ -46,6 +46,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed ASCII animation text color to blue for better visual appeal
 - Centered navigation menu in the header with fixed positioning
 - Enhanced OkDash gradient container with screenshot background and transparent-to-black gradient overlay
+- Added ASCII animation backgrounds to code example sections, replacing static SVG textures
+- Created modular background components for each code example (OkStreamBackground, OkFlowBackground, OkDeployBackground)
+- Implemented a reusable CodeBlockBackground component with customizable geometry, colors, and animation speeds
+- Added semi-transparent overlays to ensure text readability against animated backgrounds
+
+### Changed
+- Significantly increased the size of all ASCII animations to better fill their containers
+- Doubled the size of the TorusKnot geometry in the hero section (from 100x30 to 200x60)
+- Increased camera distance and field of view for better perspective on larger animations
+- Reduced ASCII resolution from 0.2 to 0.15/0.12 to create larger ASCII characters
+- Further scaled up code example background geometries (sphere, torus, torusKnot) by 50%
+- Optimized animation parameters for smoother rendering across all sections
 
 ### Planned Features
 

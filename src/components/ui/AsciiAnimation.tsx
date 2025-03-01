@@ -32,10 +32,10 @@ export const AsciiAnimation: React.FC<AsciiAnimationProps> = ({ children }) => {
       70,
       window.innerWidth / window.innerHeight,
       1,
-      1000
+      2000
     );
-    camera.position.y = 100;
-    camera.position.z = 400;
+    camera.position.y = 150;
+    camera.position.z = 800;
     cameraRef.current = camera;
 
     // Add lights
@@ -47,8 +47,8 @@ export const AsciiAnimation: React.FC<AsciiAnimationProps> = ({ children }) => {
     pointLight2.position.set(-500, -500, -500);
     scene.add(pointLight2);
 
-    // Add a more complex shape
-    const geometry = new THREE.TorusKnotGeometry(100, 30, 100, 16);
+    // Add a more complex shape - significantly larger
+    const geometry = new THREE.TorusKnotGeometry(200, 60, 100, 16);
     const material = new THREE.MeshPhongMaterial({ 
       flatShading: true,
       color: 0xffffff,
@@ -59,13 +59,13 @@ export const AsciiAnimation: React.FC<AsciiAnimationProps> = ({ children }) => {
     sphereRef.current = shape;
 
 
-    // Initialize renderer
+    // Initialize renderer - use full container size
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     rendererRef.current = renderer;
 
-    // Initialize ASCII effect
-    const effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, resolution: 0.2 });
+    // Initialize ASCII effect - with lower resolution for larger characters
+    const effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, resolution: 0.15 });
     effect.setSize(window.innerWidth, window.innerHeight);
     effect.domElement.style.color = '#4a9eff'; // Blue shade
     effect.domElement.style.backgroundColor = 'transparent';

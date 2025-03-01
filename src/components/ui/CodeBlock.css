@@ -29,10 +29,13 @@ code .line:before {
   counter-increment: line;
   content: counter(line);
   display: inline-block;
-  width: 1.5rem;
+  width: 2rem;
   margin-right: 1rem;
   text-align: right;
   color: #64748b;
+  user-select: none;
+  border-right: 1px solid #64748b30;
+  padding-right: 0.5rem;
 }
 
 /* Syntax highlighting colors */

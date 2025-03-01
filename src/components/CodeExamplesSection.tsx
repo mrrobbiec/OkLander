@@ -1,5 +1,9 @@
 import React from 'react';
 import CodeBlock from './ui/CodeBlock';
+import OkStreamBackground from './ui/OkStreamBackground';
+import OkFlowBackground from './ui/OkFlowBackground';
+import OkDeployBackground from './ui/OkDeployBackground';
+import { TypewriterLogo } from './ui/TypewriterLogo';
 
 const CodeExamplesSection: React.FC = () => {
   // Code examples from the provided content
@@ -85,19 +89,18 @@ alerts = app._monitor.get_active_alerts()`;
         </div>
 
         {/* OkStream Example */}
-        <div className="mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative">
-          {/* Subtle texture background */}
-          <div 
-            className="absolute inset-0 z-0 opacity-10"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          ></div>
+        <div className="mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative min-h-[400px]">
+          {/* Background for the entire container */}
+          <div className="absolute inset-0 overflow-hidden h-full">
+            <OkStreamBackground />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 relative z-10">
             {/* Left side: Text content */}
-            <div className="p-8 flex flex-col justify-center md:col-span-1">
-              <h3 className="text-2xl font-bold mb-4 text-blue">OkStream</h3>
+            <div className="p-8 flex flex-col justify-center md:col-span-1 bg-slate-900/70 backdrop-blur-sm">
+              <div className="mb-4 text-blue">
+                <TypewriterLogo text="OkStream" />
+              </div>
               <p className="mb-4 text-white/80 text-lg">
                 Real-Time Intelligence at Scale
               </p>
@@ -110,30 +113,28 @@ alerts = app._monitor.get_active_alerts()`;
             </div>
             
             {/* Right side: Code block */}
-            <div className="bg-slate-950 p-6 md:col-span-2">
+            <div className="p-6 md:col-span-2">
               <CodeBlock 
                 code={okStreamCode} 
-                language="python" 
-                title="okstream_example.py" 
+                language="python"
               />
             </div>
           </div>
         </div>
 
         {/* OkFlow Example */}
-        <div className="mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative">
-          {/* Subtle texture background */}
-          <div 
-            className="absolute inset-0 z-0 opacity-10"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          ></div>
+        <div className="mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative min-h-[400px]">
+          {/* Background for the entire container */}
+          <div className="absolute inset-0 overflow-hidden h-full">
+            <OkFlowBackground />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 relative z-10">
             {/* Left side: Text content */}
-            <div className="p-8 flex flex-col justify-center md:col-span-1">
-              <h3 className="text-2xl font-bold mb-4 text-blue">OkFlow</h3>
+            <div className="p-8 flex flex-col justify-center md:col-span-1 bg-slate-900/70 backdrop-blur-sm">
+              <div className="mb-4 text-blue">
+                <TypewriterLogo text="OkFlow" />
+              </div>
               <p className="mb-4 text-white/80 text-lg">
                 AI-Native Workflow Engine
               </p>
@@ -146,30 +147,28 @@ alerts = app._monitor.get_active_alerts()`;
             </div>
             
             {/* Right side: Code block */}
-            <div className="bg-slate-950 p-6 md:col-span-2">
+            <div className="p-6 md:col-span-2">
               <CodeBlock 
                 code={okFlowCode} 
-                language="python" 
-                title="okflow_example.py" 
+                language="python"
               />
             </div>
           </div>
         </div>
 
         {/* OkDeploy Example */}
-        <div className="mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative">
-          {/* Subtle texture background */}
-          <div 
-            className="absolute inset-0 z-0 opacity-10"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")`,
-            }}
-          ></div>
+        <div className="mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative min-h-[400px]">
+          {/* Background for the entire container */}
+          <div className="absolute inset-0 overflow-hidden h-full">
+            <OkDeployBackground />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 relative z-10">
             {/* Left side: Text content */}
-            <div className="p-8 flex flex-col justify-center md:col-span-1">
-              <h3 className="text-2xl font-bold mb-4 text-blue">OkDeploy</h3>
+            <div className="p-8 flex flex-col justify-center md:col-span-1 bg-slate-900/70 backdrop-blur-sm">
+              <div className="mb-4 text-blue">
+                <TypewriterLogo text="OkDeploy" />
+              </div>
               <p className="mb-4 text-white/80 text-lg">
                 Zero-Ops Platform
               </p>
@@ -182,12 +181,52 @@ alerts = app._monitor.get_active_alerts()`;
             </div>
             
             {/* Right side: Code block */}
-            <div className="bg-slate-950 p-6 md:col-span-2">
+            <div className="p-6 md:col-span-2">
               <CodeBlock 
                 code={okDeployCode} 
-                language="python" 
-                title="okdeploy_example.py" 
+                language="python"
               />
+            </div>
+          </div>
+        </div>
+        {/* OkDash Section */}
+        <div className="mt-16 mb-16 rounded-lg overflow-hidden border border-blue/30 bg-slate-900 relative min-h-[400px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 relative z-10">
+            {/* Left side: Text content */}
+            <div className="p-8 flex flex-col justify-center bg-slate-900/70">
+              <div className="mb-4 text-blue">
+                <TypewriterLogo text="OkDash" />
+              </div>
+              <p className="mb-4 text-white/80 text-lg">
+                Data Journalism as Business Intelligence
+              </p>
+              <ul className="list-disc list-inside text-white/80 space-y-2">
+                <li>First-class data journalism out of the box from any OkEngine source</li>
+                <li>Plug into your existing data for AAA data science reporting</li>
+                <li>Interactive dashboards with real-time updates</li>
+                <li>Ditch PowerBI for a more powerful, flexible solution</li>
+              </ul>
+              <div className="mt-6">
+                <button className="px-4 py-2 bg-blue text-white rounded-md hover:bg-blue-700 transition-colors">
+                  Try OkDash Today
+                </button>
+              </div>
+            </div>
+            
+            {/* Right side: Screenshot */}
+            <div className="p-6 flex items-center justify-center">
+              <div className="relative w-full max-w-lg">
+                <div className="absolute -inset-0.5 bg-blue/30 rounded-lg blur opacity-75"></div>
+                <video 
+                  src="/captureOkDash.mov" 
+                  className="relative rounded-lg w-full h-auto z-10 border border-blue/20"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              </div>
             </div>
           </div>
         </div>
