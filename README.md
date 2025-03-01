@@ -20,7 +20,7 @@ A modern, responsive landing page for OkeLanding - a compelling landing page.
 - **TypeScript**: Type-safe JavaScript for better developer experience
 - **Vite**: Fast, modern frontend build tool
 - **Tailwind CSS**: Utility-first CSS framework
-- **Motion**: Animation library for smooth transitions
+- **Motion**: Animation library for smooth transitions 
 - **Three.js**: 3D graphics library for creating the ASCII art animation
 
 ## Getting Started
