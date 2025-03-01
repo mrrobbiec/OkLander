@@ -2,7 +2,7 @@
 
 A modern, responsive landing page for OkeLanding - a compelling landing page.
 
-![OkeLanding](public/Screenshot 2025-03-01 at 11.01.28 am.png)
+![OkeLanding](public/sc.png)
 
 ## Features
 
