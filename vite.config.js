@@ -8,7 +8,7 @@ export default defineConfig({
     open: true
   },
   build: {
-    outDir: 'dist',
+    outDir: 'build',
     minify: 'terser',
     sourcemap: true
   }
