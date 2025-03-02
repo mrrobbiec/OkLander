@@ -63,10 +63,15 @@ For data visualisations, use these colours for consistency:
 
 The application uses IBM Plex fonts for all text:
 
-- **IBM Plex Sans**: Primary font for all UI text, paragraphs, buttons, and labels
-- **IBM Plex Serif**: Used for logos and certain headings
+- **IBM Plex Serif**: Primary font for all body text, paragraphs, and general content
+- **IBM Plex Sans**: Used for UI elements, buttons, and labels
+- **IBM Plex Serif**: Also used for logos and headings
 
 ```css
+/* Default body text */
+font-family: 'IBM Plex Serif', serif;
+
+/* For UI elements that need sans-serif */
 font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 ```
 
@@ -377,6 +382,63 @@ For in-page tab navigation, use this style:
 ```
 
 ## Components
+
+### Icons
+
+The application uses NES.css for retro-style 8-bit icons. These icons provide a distinctive, nostalgic aesthetic that enhances the visual appeal of the interface.
+
+#### Icon Usage
+
+Icons are implemented using the `<i>` element with NES.css classes:
+
+```html
+<!-- Basic icon usage -->
+<i className="nes-icon star"></i>
+
+<!-- Size variants -->
+<i className="nes-icon star is-small"></i>
+<i className="nes-icon star is-medium"></i>
+<i className="nes-icon star is-large"></i>
+
+<!-- With additional classes -->
+<i className="nes-icon heart is-medium custom-class"></i>
+```
+
+#### Available Icons
+
+The following NES.css icons are used throughout the application:
+
+| Icon | Class | Usage |
+|------|-------|-------|
+| Trophy | `nes-icon trophy` | Logo, achievements |
+| Star | `nes-icon star` | Highlights, ratings, features |
+| Heart | `nes-icon heart` | Favorites, health indicators |
+| Coin | `nes-icon coin` | Currency, rewards, points |
+| Like | `nes-icon like` | Positive indicators, approvals |
+| Close | `nes-icon close` | Negative indicators, warnings |
+| Caret Right | `nes-icon caret-right` | Navigation, next steps |
+| GitHub | `nes-icon github` | Social links |
+
+#### Icon Implementation
+
+Icons are defined in the `src/components/icons.tsx` file as React components:
+
+```tsx
+export type IconProps = React.HTMLAttributes<HTMLElement> & {
+  variant?: 'is-small' | 'is-medium' | 'is-large';
+  className?: string;
+}
+
+export const Icons = {
+  logo: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon trophy ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
+  ),
+  // Additional icons...
+}
+```
 
 ### Cards
 

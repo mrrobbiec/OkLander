@@ -53,12 +53,12 @@
 }
 
 html, body {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   scroll-behavior: smooth;
 }
 
-.font-serif {
-  font-family: var(--font-serif);
+.font-sans {
+  font-family: var(--font-sans);
 }
 
 .bg-grid {

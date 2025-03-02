@@ -8,8 +8,16 @@ A modern, responsive landing page for OkeLanding - a compelling landing page.
 
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Modern UI**: Clean, professional design with smooth animations
+- **Retro 8-bit Icons**: NES.css integration providing nostalgic, pixel-art style icons throughout the interface
 - **ASCII Art Animation**: Eye-catching Three.js powered ASCII animation in the hero section with blue text
+- **Animated Code Examples**: Transparent code blocks with dynamic ASCII art backgrounds
+- **Typewriter Effect**: Animated typewriter effect for product titles using the TypewriterLogo component
+- **OkDash Video Showcase**: Embedded video demonstration of the OkDash product capabilities
 - **Streamlined Navigation**: Centered navigation menu with small, white text buttons and hover effects
+- **Product Overview Section**: "What is OkEngine?" section with title on the right and content on the left
+- **Problem vs. Solution Comparison**: Two-column layout comparing traditional BI struggles with OkEngine solutions
+- **Value Proposition Billboard**: Eye-catching section with large headline and four key benefits
+- **Elegant Typography**: IBM Plex Serif font for all body text enhancing readability and visual appeal
 - **Performance Optimized**: Fast loading times and optimized assets
 - **SEO Friendly**: Proper semantic HTML structure
 - **Accessibility**: WCAG compliant design elements

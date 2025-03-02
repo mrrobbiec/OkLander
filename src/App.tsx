@@ -5,6 +5,8 @@ import { NavigationMenuDemo } from './components/NavigationMenuDemo';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { TypewriterLogo } from './components/ui/TypewriterLogo';
 import CodeExamplesSection from './components/CodeExamplesSection';
+import WorkflowAnimation from './components/WorkflowAnimation';
+import OkEngineBackground from './components/ui/OkEngineBackground';
 
 const App: React.FC = () => {
   return (
@@ -30,6 +32,185 @@ const App: React.FC = () => {
           <AsciiHero />
         </section>
 
+        {/* What is OkEngine Section */}
+        <section id="about" className="py-20 px-4 bg-slate-950 text-white relative overflow-hidden">
+          <OkEngineBackground />
+          <div className="max-w-6xl mx-auto relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Content on the left */}
+              <div className="order-2 md:order-1">
+                <p className="text-white/80 text-lg leading-relaxed">
+                  OkEngine is a next-generation data platform crafted to simplify Business Intelligence in the age of real-time machine learning. By championing an "agentic" approach to data, OkEngine takes the complexity out of everything from ingestion and transformation to deployment and interactive analytics. Our mission is straightforward: free you from the constraints of archaic data stacks and empower your team to unlock actionable insights—without spinning up heavy infrastructure or hiring a small army of specialists.
+                </p>
+              </div>
+              
+              {/* Title on the right */}
+              <div className="order-1 md:order-2">
+                <div className="mb-8 md:text-right">
+                  <h2 className="text-3xl font-bold mb-1">What is OkEngine?</h2>
+                  <div className="h-1 w-16 bg-blue ml-auto mb-6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem vs. Solution Comparison Section */}
+        <section id="comparison" className="py-20 px-4 bg-slate-950 text-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Left Panel (Old Way) */}
+              <div className="p-6 border border-blue/30 rounded-lg bg-dark-blue-accent/10">
+                <h3 className="text-2xl font-bold mb-6">The Old BI Struggle</h3>
+                
+                {/* Bullet Point 1 */}
+                <div className="flex items-start mb-6">
+                  <div className="w-12 h-12 bg-blue/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="nes-icon is-small close"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Time-consuming manual setup</h4>
+                    <p className="text-white/80">Lengthy implementation processes requiring extensive configuration and setup time.</p>
+                  </div>
+                </div>
+                
+                {/* Bullet Point 2 */}
+                <div className="flex items-start mb-6">
+                  <div className="w-12 h-12 bg-blue/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="nes-icon is-small close"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Multiple teams needed</h4>
+                    <p className="text-white/80">Requiring data engineering, data science, and DevOps teams just to keep the basics running.</p>
+                  </div>
+                </div>
+                
+                {/* Bullet Point 3 */}
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-blue/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="nes-icon is-small close"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Static dashboards</h4>
+                    <p className="text-white/80">Inflexible visualisations that can't adapt to changing business questions or data needs.</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Panel (New Way) */}
+              <div className="p-6 border border-blue/30 rounded-lg bg-dark-blue-accent/10">
+                <h3 className="text-2xl font-bold mb-6">Enter OkEngine</h3>
+                
+                {/* Bullet Point 1 */}
+                <div className="flex items-start mb-6">
+                  <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="nes-icon is-small star"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Rapid deployment through streamlined flows</h4>
+                    <p className="text-white/80">Get up and running in minutes with low-code decorators and automated deployments.</p>
+                  </div>
+                </div>
+                
+                {/* Bullet Point 2 */}
+                <div className="flex items-start mb-6">
+                  <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="nes-icon is-small star"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">One integrated platform to replace multiple tools</h4>
+                    <p className="text-white/80">No more juggling separate tools or dealing with compatibility headaches.</p>
+                  </div>
+                </div>
+                
+                {/* Bullet Point 3 */}
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="nes-icon is-small star"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Interactive, AI-driven "datarticles"</h4>
+                    <p className="text-white/80">Leverage live data and AI-driven predictions for real-time insights and decision-making.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Value Proposition Billboard */}
+        <section id="value-proposition" className="py-20 px-4 bg-slate-950 text-white relative overflow-hidden">
+          {/* Scan lines overlay */}
+          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <div 
+              className="absolute inset-0 w-full h-full"
+              style={{
+                backgroundImage: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.25) 0px, rgba(0,0,0,0.25) 0.5px, transparent 0.5px, transparent 3px)',
+                backgroundSize: '100% 3.5px',
+                opacity: 0.7,
+                filter: 'blur(0.2px)',
+              }}
+            ></div>
+            <div 
+              className="absolute inset-0 w-full h-full bg-grid-dark"
+              style={{
+                backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 0.5px, transparent 0.5px, transparent 7px)',
+                backgroundSize: '100% 7.5px',
+                animation: 'scanline-animation 8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite',
+                opacity: 0.8,
+                filter: 'blur(0.3px)',
+              }}
+            ></div>
+          </div>
+          
+          <div className="max-w-6xl mx-auto relative z-10">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Accelerate Your AI-Powered Insights—Without the Overhead</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Benefit 1: Speed */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="nes-icon is-medium coin"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Speed</h3>
+                <p className="text-white/80">Deploy in minutes, not months</p>
+              </div>
+              
+              {/* Benefit 2: Simplicity */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="nes-icon is-medium star"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Simplicity</h3>
+                <p className="text-white/80">Low/No DevOps overhead</p>
+              </div>
+              
+              {/* Benefit 3: Real-Time ML */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="nes-icon is-medium trophy"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Real-Time ML</h3>
+                <p className="text-white/80">Always up-to-date insights</p>
+              </div>
+              
+              {/* Benefit 4: Scalable */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="nes-icon is-medium heart"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Scalable</h3>
+                <p className="text-white/80">Grows with your data</p>
+              </div>
+            </div>
+        </div>
+      </section>
+
+        {/* Workflow Animation Section */}
+        <WorkflowAnimation />
+
         {/* Code Examples Section */}
         <CodeExamplesSection />
 
@@ -46,9 +227,7 @@ const App: React.FC = () => {
             {/* Feature 1 */}
             <div className="p-6 border border-blue/30 rounded-lg hover:shadow-md transition-shadow bg-dark-blue-accent/10">
               <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+                <i className="nes-icon is-small star"></i>
               </div>
               <h3 className="font-bold text-xl mb-2">Advanced Analytics</h3>
               <p className="text-white/80">Leverage powerful data analysis tools to uncover hidden patterns and trends.</p>
@@ -57,9 +236,7 @@ const App: React.FC = () => {
             {/* Feature 2 */}
             <div className="p-6 border border-blue/30 rounded-lg hover:shadow-md transition-shadow bg-dark-blue-accent/10">
               <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                <i className="nes-icon is-small like"></i>
               </div>
               <h3 className="font-bold text-xl mb-2">Real-time Predictions</h3>
               <p className="text-white/80">Get instant forecasts based on the latest data and market conditions.</p>
@@ -68,9 +245,7 @@ const App: React.FC = () => {
             {/* Feature 3 */}
             <div className="p-6 border border-blue/30 rounded-lg hover:shadow-md transition-shadow bg-dark-blue-accent/10">
               <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+                <i className="nes-icon is-small heart"></i>
               </div>
               <h3 className="font-bold text-xl mb-2">Secure Platform</h3>
               <p className="text-white/80">Your data is protected with enterprise-grade security and encryption.</p>
@@ -79,9 +254,7 @@ const App: React.FC = () => {
             {/* Feature 4 */}
             <div className="p-6 border border-blue/30 rounded-lg hover:shadow-md transition-shadow bg-dark-blue-accent/10">
               <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
+                <i className="nes-icon is-small coin"></i>
               </div>
               <h3 className="font-bold text-xl mb-2">Customizable Dashboards</h3>
               <p className="text-white/80">Create personalized views that focus on the metrics that matter to you.</p>
@@ -90,9 +263,7 @@ const App: React.FC = () => {
             {/* Feature 5 */}
             <div className="p-6 border border-blue/30 rounded-lg hover:shadow-md transition-shadow bg-dark-blue-accent/10">
               <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+                <i className="nes-icon is-small trophy"></i>
               </div>
               <h3 className="font-bold text-xl mb-2">Collaborative Tools</h3>
               <p className="text-white/80">Share insights and work together with your team in real-time.</p>
@@ -101,9 +272,7 @@ const App: React.FC = () => {
             {/* Feature 6 */}
             <div className="p-6 border border-blue/30 rounded-lg hover:shadow-md transition-shadow bg-dark-blue-accent/10">
               <div className="w-12 h-12 bg-blue rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+                <i className="nes-icon is-small star"></i>
               </div>
               <h3 className="font-bold text-xl mb-2">AI-Powered Insights</h3>
               <p className="text-white/80">Leverage machine learning to uncover insights and make better predictions.</p>

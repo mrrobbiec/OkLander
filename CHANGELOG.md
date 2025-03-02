@@ -50,6 +50,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created modular background components for each code example (OkStreamBackground, OkFlowBackground, OkDeployBackground)
 - Implemented a reusable CodeBlockBackground component with customizable geometry, colors, and animation speeds
 - Added semi-transparent overlays to ensure text readability against animated backgrounds
+- Added new OkDash section featuring an embedded video with autoplay and loop functionality
+- Implemented TypewriterLogo component for product titles to match branding style
+- Added new "What is OkEngine?" section immediately after the hero section with title on the right and content on the left
+- Added "Problem vs. Solution" comparison section with two-column layout comparing traditional BI struggles with OkEngine solutions
+- Created Value Proposition "Billboard" section with a large headline and four key benefits (Speed, Simplicity, Real-Time ML, Scalability)
+- Implemented paper texture background with scan lines overlay for the Value Proposition section
+- Integrated NES.css for retro 8-bit style icons throughout the interface
+- Replaced SVG icons with NES.css icons in the comparison section, value proposition section, and features section
+- Created a reusable Icons component in src/components/icons.tsx with support for different icon sizes and custom classes
+- Added new icon types: trophy, star, heart, coin, like, close, caret-right, and github
 
 ### Changed
 - Significantly increased the size of all ASCII animations to better fill their containers
@@ -58,6 +68,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reduced ASCII resolution from 0.2 to 0.15/0.12 to create larger ASCII characters
 - Further scaled up code example background geometries (sphere, torus, torusKnot) by 50%
 - Optimized animation parameters for smoother rendering across all sections
+- Updated code example titles to use TypewriterLogo component for consistent branding
+- Removed code block filenames for cleaner presentation
+- Made code example backgrounds 100% transparent to better showcase background animations
+- Changed default font from IBM Plex Sans to IBM Plex Serif for all body text to enhance readability and visual appeal
 
 ### Planned Features
 

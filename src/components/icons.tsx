@@ -1,34 +1,52 @@
 import React from "react"
 
-export type IconProps = React.HTMLAttributes<SVGElement>
+export type IconProps = React.HTMLAttributes<HTMLElement> & {
+  variant?: 'is-small' | 'is-medium' | 'is-large';
+  className?: string;
+}
 
 export const Icons = {
-  logo: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-    </svg>
+  logo: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon trophy ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
   ),
-  chevronRight: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="m9 18 6-6-6-6" />
-    </svg>
+  chevronRight: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon caret-right ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
+  ),
+  // Adding more NES.css icons for additional options
+  heart: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon heart ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
+  ),
+  star: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon star ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
+  ),
+  like: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon like ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
+  ),
+  coin: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon coin ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
+  ),
+  github: ({ variant, className, ...props }: IconProps) => (
+    <i 
+      className={`nes-icon github ${variant || ''} ${className || ''}`} 
+      {...props} 
+    />
   ),
 }

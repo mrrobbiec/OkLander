@@ -203,7 +203,7 @@ export function AsciiHero() {
         className="mt-8 py-4 text-center text-5xl font-bold tracking-tight text-white md:text-7xl font-serif"
         style={{ letterSpacing: "-0.05em", textShadow: "0 0 8px rgba(0,0,0,0.7)" }}
       >
-        Predict the future with precision and confidence
+        Step boldly into the agentic era of data. Harness real-time ML, interactive “datarticles,” and streamlined pipelines–all without the overhead. Welcome to the future of BI.
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
@@ -216,7 +216,7 @@ export function AsciiHero() {
         className="mt-4 text-white text-center text-xl max-w-2xl font-sans font-medium drop-shadow-md"
         style={{ textShadow: "0 0 8px rgba(0,0,0,0.7)" }}
       >
-        The new world of agentic workflows is here, say goodbye infra and OkEngine.
+        Unleash your data’s potential. Simplify everything. Supercharge innovation.
       </motion.p>
     </AsciiAnimation>
   );
